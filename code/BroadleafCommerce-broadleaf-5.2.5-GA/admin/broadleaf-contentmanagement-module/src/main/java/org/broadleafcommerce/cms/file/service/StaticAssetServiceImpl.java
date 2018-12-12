@@ -175,8 +175,11 @@ public class StaticAssetServiceImpl implements StaticAssetService {
         } else {
             fileName = originalFilename;
         }
-
-        return path.append(fileName).toString();
+        String re_path = path.append(fileName).toString();
+        if(re_path.indexOf(":") != -1){
+            re_path = re_path.replaceAll(":", "");
+        }
+        return re_path;
     }
     
     private static String normalizeFileExtension(MultipartFile file) {
