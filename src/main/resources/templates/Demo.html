@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="frag1 (onevar,twovar)">
+    <p th:text="'my name is' + ${onevar} + ${twovar}">aa</p>
+</div>
+<div th:fragment="frag(onevar)">
+    <p th:text="'my name is' + ${onevar}">aa</p>
+</div>
+<div th:fragment="copy">
+    <h1>aaaa</h1>
+</div>
+</body>
+</html>

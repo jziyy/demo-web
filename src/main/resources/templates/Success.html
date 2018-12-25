@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div th:replace="Demo :: frag1 (onevar = ${one},twovar = ${two})">aa</div>
+<div th:replace="Demo :: frag (${one})">aa</div>
+<div th:replace="/Demo :: copy">aa</div>
+<div>
+    <p th:utext="${one}">hello world</p>
+</div>
+<div>
+    <p th:utext="'今天是个特殊的一天'">aaa</p>
+</div>
+<div th:if="${one} eq ${two}">
+    <p>aaaaaa</p>
+</div>
+<div th:if="${one} eq 'jz'">
+    <p th:utext="nihao">aaa</p>
+</div>
+<div>
+    <a th:href="@{/jziyy/demo}" th:unless='${one} eq null' th:utext="${one} + 'aaaa'"></a>
+
+</div>
+</body>
+</html>
